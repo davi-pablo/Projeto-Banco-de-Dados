@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência de Viagens - Descubra novos destinos!">
+    <meta name="keywords" content="viagens, turismo, destinos, agência de viagens">
+    <title>Universi Tour - Agência de Viagens</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Universi Tour</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal -->
+    <section id="home">
+        <div class="banner">
+            <h2 style="color: black;">Explore o mundo com a gente!</h2>
+            <p style="color: black;">Conheça os melhores destinos e faça a viagem dos seus sonhos.</p>
+            <a href="#destinos" class="btn">Veja nossos destinos</a>
+        </div>
+    </section>
+
+    <!-- Destinos -->
+    <section id="destinos">
+        <div class="container">
+            <h2>Destinos Populares</h2>
+
+            <!-- Filtros de Destinos -->
+            <div class="filters">
+                <div class="filter-item">
+                    <label for="search-destination">Pesquise o Destino</label>
+                    <input type="text" id="search-destination" placeholder="Digite o destino...">
+                </div>
+                <div class="filter-item">
+                    <label for="distance">Distância</label>
+                    <select id="distance">
+                        <option value="">Selecione...</option>
+                        <option value="0-100">0 - 100 km</option>
+                        <option value="100-500">100 - 500 km</option>
+                        <option value="500-1000">500 - 1000 km</option>
+                        <option value="1000+">Acima de 1000 km</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="price">Preço de Interesse</label>
+                    <select id="price">
+                        <option value="">Selecione...</option>
+                        <option value="baixo">Baixo</option>
+                        <option value="medio">Médio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="destinos-list" id="destinos-list">
+                <!-- Os destinos serão carregados dinamicamente do banco de dados via JavaScript -->
+                <div style="text-align: center; padding: 40px; color: #666;">
+                    <p>Carregando destinos...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+      <div>
+        <br>
+     </div>
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-list">
+                <div class="servico">
+                    <h3>Pacotes de Viagem</h3>
+                    <p>Oferecemos pacotes personalizados para todos os tipos de turistas.</p>
+                </div>
+                <div class="servico">
+                    <h3>Consultoria de Viagens</h3>
+                    <p>Ajuda especializada para planejar sua viagem dos sonhos.</p>
+                </div>
+                <div class="servico">
+                    <h3>Reservas de Hotéis</h3>
+                    <p>Encontramos as melhores opções de hospedagem para o seu conforto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Contato -->
+     <div>
+        <br>
+     </div>
+    <section id="contato">
+    <section id="rio">
+    <section id="salvador">
+    <section id="recife">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="confirmacao.html" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    </section>
+    </section>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agência de Viagens - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="javasite.js"></script>
+</body>
+</html>

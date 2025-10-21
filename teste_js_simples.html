@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste JavaScript Simples</title>
+</head>
+<body>
+    <h1>Teste de Conexão JavaScript</h1>
+    <button onclick="testarAPI()">Testar API</button>
+    <div id="resultado"></div>
+
+    <script>
+        function testarAPI() {
+            console.log("Testando API...");
+            
+            fetch("http://127.0.0.1:5000/api/destinos")
+                .then(response => {
+                    console.log("Status:", response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Dados recebidos:", data);
+                    document.getElementById("resultado").innerHTML = 
+                        "<h3>Sucesso! Destinos encontrados:</h3>" +
+                        "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                })
+                .catch(error => {
+                    console.error("Erro:", error);
+                    document.getElementById("resultado").innerHTML = 
+                        "<h3 style='color: red;'>Erro:</h3>" +
+                        "<p>" + error.message + "</p>";
+                });
+        }
+    </script>
+</body>
+</html>
